@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <style type="text/css" class="INLINE_PEN_STYLESHEET_ID">
+    .example-post {
+      position: relative;
+      padding: 0;
+      color: #7f8b90;
+      border-top: 1px dotted #aaa;
+      border-bottom: 1px dotted #aaa;
+    }
+
+    .example-post p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .example-post a {
+      color: #607D8B;
+    }
+
+    .example-post:before {
+      content: "";
+      display: block;
+      background: linear-gradient(to right top, #CDDC39 0%, #03A9F4 50%, #e6f0f5 50%);
+      height: calc(100% - 100vh + 6px);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .example-post:after {
+      content: "";
+      display: block;
+      background: #e6f0f5; /*first back*/
+      height: calc(100vh - 6px);
+      width: 100%;
+      position: -webkit-sticky;
+      position: sticky;
+      bottom: 0;
+      left: 0;
+    }
+
+    code {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 3px 5px;
+      font-size: 14px;
+    }
+
+    .entry-content {
+      max-width: 790px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      margin-bottom: calc(-100vh + 6px);
+      padding: 0 15px;
+    }
+
+    /* demo stuff */
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #e6f0f5; /*first back*/
+      padding-top: 40px;
+      padding-bottom: 50px;
+      margin: 0;
+    }
+
+    html,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: 'Nunito', sans-serif;
+      color: #92a4ad;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 15px;
+      font-size: 40px;
+    }
+
+    .zoom-area {
+      max-width: 650px;
+      margin: 50px auto 70px;
+      font-size: 24px;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+    }
+
+    .link-container {
+      text-align: center;
+    }
+
+    a.more-link {
+      font-size: 18px;
+      font-weight: 700;
+      background-color: transparent;
+      padding: 10px 5px 0;
+      border-radius: 0;
+      color: #416475;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      text-decoration: none;
+      margin-top: 50px;
+      letter-spacing: 1px;
+      border-bottom: 6px solid #92a4ad;
+    }
+  </style>
+   <link rel="icon" href="favicon.ico"/>
+   <title>Essay t.i</title>
+</head>
+
+<body>
+  <h1>How rest architecture is related to the principles of modern architecture</h1>
+  <p class="zoom-area"><b>Miguel Esteban Farias Obando</b></p>
+  <section class="example-post">
+    <div class="entry-content">
+      <h2></h2>
+      <p>
+        This document aim to present the advantages of a rest-based architecture, how this type of architecture is affected by some  principles of  modern IT infrastructure  and how certain concepts can be implemented for an architecture based on  good practices, this through the use of examples in which it is detailed if an architecture based on rest  it complies with each of these concepts, to conclude if it fulfills it well, it does not fulfill it or what we can do to achieve it.
+      </p>
+        <p>
+          To begin with, we have to define what is REST (Representational State Transfer) and this is a set of recommendations and practices that can be applied to an architecture, these restrictions are applied as needed, this indicates that REST is flexible in terms of its requirements, and it is not necessary to apply all the recommendations to have A good solution and that various problems can be solved in different ways.
+        </p>
+      <p>
+        The first principle we are going to talk about is security, an architecture based on REST gives us 3 guidelines regarding security, the first is the data transfer protocol, REST works the client server communication through http, with their respective requests, GET, POST, PUT, DELETE, e.tc,  but it is clear that if we only use this communication protocol the data of the application is exposed to its theft, that is why it is necessary to implement the HTTPS protocol with an SSL certificate to ensure that the data travels safely and encrypted.  Another problem that may arise is that the URL where our REST solution is public so that the different clients that can consume the resources of the application, making anyone can access these servers, to mitigate this we can use CORS, which allows us to limit the request for resources to only the verified clients to use the solution. Finally, when working queries with parameters that it is managed through the URL, some data that is transferred in this communication can be exposed, to solve this a generation of hash code is used, to have all the information as parameters, but that is encoded so as not to have exposed some sensitive data.
+      </p>
+      <p>
+        The second principle that will be discussed is agility, the advantage of REST at the time of its application is that it is flexible in its requirements and that it does not need to apply something openly mandatory, improving the speed of development, but to carry out this agile process you need to have good communication between the development of the client and the development of the server,  since REST needs certain specifications on the part of the client so that the server can correctly handle the requests and if this is not well implemented agility can be affected, this being a principle that does not depend so much on the architecture but on the development team and how good the communication is.
+      </p>
+      <p>
+        The third principle to deal with is scalability, and this is one of the strongest points  that REST has, to begin with, we have to talk about the stateless principle that has REST, this refers to the fact that each request that is made does not have to depend on others and that all the necessary information should be contained in the request,  without saving anything in memory, this is something that at first may seem to affect performance, since  the same information may be sent many times such as a client authentication, but the advantage it has is that you do not need to use memory to save a state, which leads to if we have several users consuming the resources,  it is not a limiting factor the memory and that this is affected the more users use the resources, another advantage in terms of scalability is the use of the server client, by separating the responsibilities of the client, the responsibilities of the server are less and the components of the server are simplified. Finally, another advantage of REST in scalability is its layered system, in which the architecture is composed of hierarchical layers and the behavior of the components is restricted, this allows the use of a shared intermediary, in which the functionalities are moved infrequently, generating a benefit in scalability by balancing the loads of the services.
+      </p>
+      <p>
+        Finally, we are going to deal with the principle of decoupling, another determining factor when we use rest, we have already talked about the layer system of the rest services, generating that the behavior of the components can be restricted, with this we achieve that each component does not see beyond its immediate layer in which it interacts, with this system it is achieved that the components can independent in their layer  and that a component of a layer does not affect another component outside, achieving that if this component goes down, the other components are not affected, along with this changes and tests can be made in some components while other components are in operation, other services can also be deactivated due to cost issues in the servers,  as we can see decoupling is a principle that we can fulfill with this architecture.
+      </p>
+      <p>
+        As we have seen in this document, the good practices that suggest implementing a rest type architecture  lead us on the right track to comply with the principles of architecture, we can also say that it follows the KISS principle thanks to its flexible style, which does not force us to implement certain recommendations to have a good solution, if we are not going to get value or it is irrelevant a recommendation is simply not taken,  unlike other architectures in which it is necessary to implement all the components even if they are not completely necessary, to conclude, the flexibility of rest and its good recommendations are of great help when seeking to comply with the principles of modern infrastructure.
+      </p>
+
+        <a>
+        </a>
+</body>
+
+</html>
